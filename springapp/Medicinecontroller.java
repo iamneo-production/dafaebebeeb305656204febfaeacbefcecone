@@ -1,7 +1,7 @@
 
-package com.springapp;
-import com.springapp.Medicine;
-import com.springapp.Medicineservice;
+package springapp;
+import springapp.Medicine;
+import springapp.Medicineservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 @RestController
@@ -17,5 +17,7 @@ public class Medicinecontroller {
         return medicineService.addMedicine(medicine);
     }
     @PutMapping("/{mediineId}")
-    public Medicine updateMedicine(@PathVariable int medicineId,@RequestBody Medicine updatedMedicine)
+    public Medicine updateMedicine(@PathVariable int medicineId,@RequestBody Medicine updatedMedicine){
+        return medicineService.updateMedicine(medicineId,updatedMedicine);
+    }
 }
