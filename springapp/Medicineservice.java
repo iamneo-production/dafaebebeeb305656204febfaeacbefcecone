@@ -16,8 +16,11 @@ public class Medicineservice {
             if(medicine.getMedicineId()==medicineId){
                 medicine.setMedicineName(updatedMedicine.getMedicineName());
                 medicine.setPrice(updatedMedicine.getPrice());
-                medicine.set
+                medicine.setQuantity(updatedMedicine.getQuantity());
+                medicine.setDescription(updatedMedicine.getDescription());
+                return medicine;
             }
         }
+        return null;
     }
 }
