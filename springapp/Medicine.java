@@ -1,3 +1,4 @@
+package com.springapp;
 public class Medicine {
     private int medicineId;
     private String medicineName;
@@ -8,7 +9,11 @@ public class Medicine {
 
     }
     public Medicine(int medicineId,String medicineName,float price,int quantity,String description){
-        this.medicineId=
+        this.medicineId=medicineId;
+        this.medicineName=medicineName;
+        this.price=price;
+        this.quantity=quantity;
+        this.description=description;
     }
 
     
